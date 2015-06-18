@@ -23,3 +23,18 @@ body {
 .primary {
 	color: #70224c;
 }
+
+.primary-button {
+	padding: 10px 20px;
+	border: 1px solid #70224c;
+	border-radius: 10px;
+	font-size: 18px;
+	background-color: #70224c;
+	color: #fff;
+	cursor: pointer;
+}
+
+.call-to-action-wrapper {
+	margin-top: 25px;
+	text-align: center;
+}
