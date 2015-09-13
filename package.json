@@ -1,12 +1,12 @@
 {
-  "name": "individualthemes",
-  "title": "IndividualThemes",
-  "id": "sslPersonas@tobitobi.de",
-  "description": "IndividualThemes displays individual themes for websites with a certificate.",
+  "name": "trustedthemes",
+  "title": "TrustedThemes",
+  "id": "trustedThemes@vannsl.io",
+  "description": "TrustedThemes displays individual themes for websites with a certificate.",
   "author": "Vanessa Boehner",
   "license": "MIT",
   "version": "1.0",
-  "icon": "data/img/icon/SSLPersonas-Icon-32.png",
-  "icon64": "data/img/icon/SSLPersonas-Icon-64.png",
+  "icon": "data/img/icon/trustedthemes-32.png",
+  "icon64": "data/img/icon/trustedthemes-64.png",
   "homepage":"data/content/index.html"
 }
