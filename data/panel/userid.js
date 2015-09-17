@@ -2,13 +2,28 @@
 // message to main.js.
 // The message payload is the contents of the edit box.
 var input = document.getElementById("userid");
+var button = document.getElementById("submit");
+var error = document.getElementById("error");
+
 input.addEventListener('keyup', function onkeyup(event) {
   if (event.keyCode == 13) {
-    // Remove the newline.
-    text = input.value;
-    self.port.emit("userid-entered", text);
+    getText();
   }
 }, false);
+
+button.addEventListener('click', function(){
+	getText();
+});
+
+var getText = function(){
+	var id = input.value;
+	if(id == ""){
+		error.style.display = 'block';
+	}else{
+		self.port.emit("userid-entered", {id: id});
+	}
+}
+
 // Listen for the "show" event being sent from the
 // main add-on code. It means that the panel's about
 // to be shown.

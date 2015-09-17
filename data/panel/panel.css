@@ -1,0 +1,18 @@
+textarea {
+  margin: 10px;
+}
+
+body {
+  color: #fff;
+  background-color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.btn {
+  float: right;
+}
+
+.error {
+  display: none;
+  color: #f00;
+}
