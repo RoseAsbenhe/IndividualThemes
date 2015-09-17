@@ -51,5 +51,5 @@ var getText = function(){
 // Set the focus to the text area so the user can
 // just start typing.
 self.port.on("show", function onShow() {
-  textArea.focus();
+  //textArea.focus();
 });
