@@ -4,6 +4,7 @@
 var input = document.getElementById("userid");
 var button = document.getElementById("submit");
 var error = document.getElementById("error");
+var close = document.getElementById("close");
 
 input.addEventListener('keyup', function onkeyup(event) {
   if (event.keyCode == 13) {
@@ -13,6 +14,10 @@ input.addEventListener('keyup', function onkeyup(event) {
 
 button.addEventListener('click', function(){
 	getText();
+});
+
+close.addEventListener('click', function(){
+	self.port.emit("userid-closed");
 });
 
 var getText = function(){

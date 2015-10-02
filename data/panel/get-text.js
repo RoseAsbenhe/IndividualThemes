@@ -2,9 +2,12 @@
 // message to main.js.
 // The message payload is the contents of the edit box.
 var textArea = document.getElementById("edit-box");
+var secondInput = document.getElementById("reason");
 var button = document.getElementById("submit");
 var trust = document.getElementsByName("trust");
 var error = document.getElementById("error");
+var close = document.getElementById("close");
+var firstClick;
 
 textArea.addEventListener('keyup', function onkeyup(event) {
   getTrust();
@@ -12,7 +15,21 @@ textArea.addEventListener('keyup', function onkeyup(event) {
 
 button.addEventListener('click', function(){
   getText();
-})
+});
+
+for(var i = 0; i < trust.length; i++) {
+    trust[i].onclick = function() {
+        if(!firstClick){
+          firstClick = true;
+          secondInput.style.display = "block";
+        }
+    };
+}
+
+close.addEventListener('click', function(){
+  cleanPanel();
+  self.port.emit("text-closed");
+});
 
 var getTrust = function(){
   for (i=0; i < 2; i++) {
@@ -51,5 +68,7 @@ var getText = function(){
 // Set the focus to the text area so the user can
 // just start typing.
 self.port.on("show", function onShow() {
-  //textArea.focus();
+  firstClick = false;
+  secondInput.style.display = "none";
 });
+
