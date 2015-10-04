@@ -4,15 +4,21 @@
 <body>
   <div id="close">&times;</div>
   <div class="header"><img src="icon.png" /></div>
-  <p>W&auml;re es auf der aktuellen Seite dieser Webseite sicher, Ihre Daten einzugeben?</p>
+  <p>Ich w&uuml;rde auf dieser Seite meine pers&ouml;nlichen Daten eingeben:</p>
   <fieldset>
-    <input id="yes" type="radio" name="trust" value="yes" class="radio-input" /><label for="yes" class="radio-label">Ja</label>
-    <input id="no" type="radio" name="trust" value="no" class="radio-input" /><label for="no" class="radio-label">Nein</label>
+    <!--
+    <input id="yes" type="radio" name="" value="yes" class="radio-input" /><label for="yes" class="radio-label">Ja</label>
+    <input id="no" type="radio" name="" value="no" class="radio-input" /><label for="no" class="radio-label">Nein</label>
+    -->
+    <div>Unwahrscheinlich</div>
+    <div>
+      <input type="range" min="0" max="100" id="trust" class="range" />
+    </div>
+    <div>Wahrscheinlich</div>
   </fieldset>
   <div id="reason" style="display: none;">
-    <p>Kurze Begr&uuml;ndung: (max. 160 Zeichen)</p>
+    <p>Kurze Begr&uuml;ndung: (optional, max. 160 Zeichen)</p>
     <textarea rows="5" cols="33" maxlength="160" id="edit-box"></textarea>
-    <div id="error" class="error">Bitte geben Sie eine kurze Begr&uuml;ndung ab.</div>
     <div class="btn">
       <button id="submit" type="submit">Abschicken</button>
     </div>
